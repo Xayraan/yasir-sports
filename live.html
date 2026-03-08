@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yaasir Sports - Live Matches</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <a class="logo" href="/">Yaasir <span>Sports</span></a>
+        <button id="menuBtn" class="menu-btn">Menu</button>
+        <nav id="navLinks" class="nav-links">
+          <a href="/">Home</a>
+          <a class="active" href="/live.html">Live Matches</a>
+          <a href="/schedule.html">Match Schedule</a>
+          <a href="/leagues.html">Leagues</a>
+          <a href="/highlights.html">Highlights</a>
+          <a href="/news.html">News</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/admin.html">Admin</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="section">
+        <div class="page-title">
+          <h1>Live Matches</h1>
+          <p>Live score updates and running football timer simulation to 90:00.</p>
+        </div>
+
+        <div class="layout-with-sidebar">
+          <div id="liveMatches" class="grid-2"></div>
+          <aside>
+            <div class="card">
+              <h3>Live Center</h3>
+              <p class="contact-text">Updates refresh automatically every second.</p>
+              <div class="ads">Advertisement <small>Sidebar Ad</small></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer"><div class="container"><p>Yaasir Sports Platform</p></div></footer>
+  </div>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/live.js"></script>
+</body>
+</html>

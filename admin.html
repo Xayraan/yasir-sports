@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yaasir Sports - Admin</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <a class="logo" href="/">Yaasir <span>Sports</span></a>
+        <button id="menuBtn" class="menu-btn">Menu</button>
+        <nav id="navLinks" class="nav-links">
+          <a href="/">Home</a>
+          <a href="/live.html">Live Matches</a>
+          <a href="/schedule.html">Match Schedule</a>
+          <a href="/leagues.html">Leagues</a>
+          <a href="/highlights.html">Highlights</a>
+          <a href="/news.html">News</a>
+          <a href="/contact.html">Contact</a>
+          <a class="active" href="/admin.html">Admin</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="section">
+        <div class="page-title">
+          <h1>Admin Panel</h1>
+          <p>Add new matches, edit live scores, and update match status.</p>
+        </div>
+
+        <div class="grid-2">
+          <form id="addMatchForm" class="card form-grid">
+            <h3>Add New Match</h3>
+            <input name="league" placeholder="League" required>
+            <input name="teamA" placeholder="Team A" required>
+            <input name="teamB" placeholder="Team B" required>
+            <input name="logoA" placeholder="Team A Logo URL (optional)">
+            <input name="logoB" placeholder="Team B Logo URL (optional)">
+            <select name="status">
+              <option>Upcoming</option>
+              <option>Live</option>
+              <option>Finished</option>
+            </select>
+            <button class="btn btn-primary" type="submit">Add Match</button>
+          </form>
+
+          <form id="updateMatchForm" class="card form-grid">
+            <h3>Update Match</h3>
+            <select id="matchId" name="matchId" required></select>
+            <input name="scoreA" type="number" min="0" placeholder="Team A Score" required>
+            <input name="scoreB" type="number" min="0" placeholder="Team B Score" required>
+            <input name="minute" type="number" min="0" max="90" placeholder="Minute" required>
+            <select name="status">
+              <option>Live</option>
+              <option>Finished</option>
+              <option>Upcoming</option>
+            </select>
+            <button class="btn btn-secondary" type="submit">Update Match</button>
+          </form>
+        </div>
+
+        <article class="card" style="margin-top:16px;">
+          <h3>Current Matches</h3>
+          <ul id="adminMatches" class="form-grid" style="margin-top:8px;"></ul>
+          <p id="adminMessage" style="margin-top:10px;"></p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer"><div class="container"><p>Yaasir Sports Platform</p></div></footer>
+  </div>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>
